@@ -10,12 +10,15 @@ namespace _02Greetings {
         public GreetingsPage() {
             Content = new Label {
                 Text = "Greetings, Xamarin.Forms!",
-                // center text
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
+                // center text 
+                // default option is LayoutOptions.Fill
+                //HorizontalOptions = LayoutOptions.Center,
+                //VerticalOptions = LayoutOptions.Center,
                 // or 
-                //HorizontalTextAlignment = TextAlignment.Center,
-                //VerticalTextAlignment = TextAlignment.Center
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                BackgroundColor = Color.Yellow,
+                TextColor = Color.Blue
             };
 
             // 20 units from the top of the page for all platforms
