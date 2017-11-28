@@ -1,4 +1,4 @@
-# Xamarin-Classes
+# Xamarin
 Samples to my Xamarin classes
 
 ## References:
