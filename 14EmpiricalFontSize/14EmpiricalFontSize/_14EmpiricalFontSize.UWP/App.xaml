@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="_14EmpiricalFontSize.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_14EmpiricalFontSize.UWP"
+    RequestedTheme="Light">
+
+</Application>
