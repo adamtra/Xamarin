@@ -12,11 +12,11 @@ namespace _02Greetings {
                 Text = "Greetings, Xamarin.Forms!",
                 // center text 
                 // default option is LayoutOptions.Fill
-                //HorizontalOptions = LayoutOptions.Center,
-                //VerticalOptions = LayoutOptions.Center,
+                // HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
                 // or 
-                HorizontalTextAlignment = TextAlignment.Center,
-                VerticalTextAlignment = TextAlignment.Center,
+                //HorizontalTextAlignment = TextAlignment.Center,
+                //VerticalTextAlignment = TextAlignment.Center,
                 BackgroundColor = Color.Yellow,
                 TextColor = Color.Blue
             };
