@@ -42,7 +42,8 @@
                             <StackLayout.Children>
                                 <BoxView Color="Blue" />
                                 <Label Text="Blue"
-                                       VerticalOptions="Center" />
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
                             </StackLayout.Children>
                         </StackLayout>
                     </Frame.Content>

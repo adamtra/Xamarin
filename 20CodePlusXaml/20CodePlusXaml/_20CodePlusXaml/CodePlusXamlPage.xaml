@@ -15,6 +15,15 @@
                        BackgroundColor="#FF8080"
                        FontSize="Large"
                        FontAttributes="Bold,Italic" />
+                <Label Text="Hello from XAML - 2!"
+                       IsVisible="True"
+                       Opacity="0.75"
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand"
+                       TextColor="Red"
+                       BackgroundColor="#DD8080"
+                       FontSize="Large"
+                       FontAttributes="Bold" />
             </StackLayout.Children>
         </StackLayout>
     </ContentPage.Content>
