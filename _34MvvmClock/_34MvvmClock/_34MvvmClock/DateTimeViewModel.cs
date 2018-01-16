@@ -12,7 +12,8 @@ namespace _34MvvmClock
 
         public DateTimeViewModel()
         {
-            Device.StartTimer(TimeSpan.FromMilliseconds(15), OnTimerTick);
+            //Device.StartTimer(TimeSpan.FromMilliseconds(15), OnTimerTick);
+            Device.StartTimer(TimeSpan.FromSeconds(3), OnTimerTick);
         }
 
         bool OnTimerTick()

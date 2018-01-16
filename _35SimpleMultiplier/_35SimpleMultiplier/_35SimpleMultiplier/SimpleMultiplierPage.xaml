@@ -19,11 +19,11 @@
 
         <StackLayout VerticalOptions="CenterAndExpand">
             <Slider Value="{Binding Multiplicand}" />
-            <Slider Value="{Binding Multiplier}" />
+            <!--<Slider Value="{Binding Multiplier}" />-->
             <!--<Stepper Value="{Binding Multiplier}" />-->
             <!--<Entry Text="{Binding Multiplier}" />-->
             <!--Try to set 1E-1-->
-            <!--<Entry Text="{Binding Multiplier, Mode=OneWayToSource}" />-->
+            <Entry Text="{Binding Multiplier, Mode=OneWayToSource}" />
         </StackLayout>
 
         <StackLayout Orientation="Horizontal"

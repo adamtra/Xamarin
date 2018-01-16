@@ -13,6 +13,7 @@ namespace _37PowersOfThree
             // Initialize properties.
             BaseValue = baseValue;
             Exponent = 0;
+            Power = 1;
 
             // Initialize ICommand properties.
             IncreaseExponentCommand = new Command(ExecuteIncreaseExponent);
