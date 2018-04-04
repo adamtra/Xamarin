@@ -152,9 +152,9 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\_27BindingCode\_27BindingCode.csproj">
-      <Project>{B9F61BDF-F867-4B14-9B30-ECB19A4AB8AC}</Project>
-      <Name>_27BindingCode</Name>
+    <ProjectReference Include="..\27BindingCode\27BindingCode.csproj">
+      <Project>{ed8e82d8-c3c7-446f-920d-4c62d7d99fad}</Project>
+      <Name>27BindingCode</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>_30ReverseBinding.Droid</RootNamespace>
     <AssemblyName>_30ReverseBinding.Android</AssemblyName>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -79,14 +79,11 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\_30ReverseBinding\_30ReverseBinding.csproj">
       <Project>{9C61EF9D-9913-48E3-B820-0591CA2D166D}</Project>
       <Name>_30ReverseBinding</Name>
     </ProjectReference>
   </ItemGroup>
-
-
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

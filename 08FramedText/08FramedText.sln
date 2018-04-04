@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_08FramedText.Android", "08FramedText\_08FramedText.Android\_08FramedText.Android.csproj", "{CC03E633-4C99-45EF-A271-F1349FB88766}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_08FramedText", "08FramedText\_08FramedText\_08FramedText.csproj", "{8C0F4E9D-523C-48F5-B7AF-4FB7BE8CE228}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_08FramedText.UWP", "08FramedText\_08FramedText.UWP\_08FramedText.UWP.csproj", "{2A2DB125-6365-4027-AF5F-57E153A85D43}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_08FramedText.iOS", "08FramedText\_08FramedText.iOS\_08FramedText.iOS.csproj", "{848BA9F9-D715-4637-9467-CD37F6238053}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -219,38 +217,6 @@ Global
 		{2A2DB125-6365-4027-AF5F-57E153A85D43}.Release|x86.ActiveCfg = Release|x86
 		{2A2DB125-6365-4027-AF5F-57E153A85D43}.Release|x86.Build.0 = Release|x86
 		{2A2DB125-6365-4027-AF5F-57E153A85D43}.Release|x86.Deploy.0 = Release|x86
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Ad-Hoc|Any CPU.ActiveCfg = Ad-Hoc|iPhoneSimulator
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Ad-Hoc|ARM.ActiveCfg = Ad-Hoc|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Ad-Hoc|iPhoneSimulator.Build.0 = Ad-Hoc|iPhoneSimulator
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Ad-Hoc|x64.ActiveCfg = Ad-Hoc|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Ad-Hoc|x86.ActiveCfg = Ad-Hoc|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.AppStore|Any CPU.ActiveCfg = AppStore|iPhoneSimulator
-		{848BA9F9-D715-4637-9467-CD37F6238053}.AppStore|ARM.ActiveCfg = AppStore|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.AppStore|iPhone.Build.0 = AppStore|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
-		{848BA9F9-D715-4637-9467-CD37F6238053}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
-		{848BA9F9-D715-4637-9467-CD37F6238053}.AppStore|x64.ActiveCfg = AppStore|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.AppStore|x86.ActiveCfg = AppStore|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Debug|ARM.ActiveCfg = Debug|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Debug|iPhone.ActiveCfg = Debug|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Debug|iPhone.Build.0 = Debug|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Debug|x64.ActiveCfg = Debug|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Debug|x86.ActiveCfg = Debug|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Release|ARM.ActiveCfg = Release|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Release|iPhone.ActiveCfg = Release|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Release|iPhone.Build.0 = Release|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Release|x64.ActiveCfg = Release|iPhone
-		{848BA9F9-D715-4637-9467-CD37F6238053}.Release|x86.ActiveCfg = Release|iPhone
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

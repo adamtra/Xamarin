@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27BindingCode.Android", "27BindingCode\27BindingCode.Android\27BindingCode.Android.csproj", "{7DCE743D-C612-4196-B55F-148B0D5DC1E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27BindingCode.UWP", "27BindingCode\27BindingCode.UWP\27BindingCode.UWP.csproj", "{0B4D5111-9797-48CA-8F41-ED0E853726F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27BindingCode.UWP1", "27BindingCode\27BindingCode.UWP\27BindingCode.UWP1.csproj", "{0B4D5111-9797-48CA-8F41-ED0E853726F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27BindingCode", "27BindingCode\27BindingCode\27BindingCode.csproj", "{ED8E82D8-C3C7-446F-920D-4C62D7D99FAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "27BindingCode", "27BindingCode\27BindingCode\27BindingCode.csproj", "{ED8E82D8-C3C7-446F-920D-4C62D7D99FAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
