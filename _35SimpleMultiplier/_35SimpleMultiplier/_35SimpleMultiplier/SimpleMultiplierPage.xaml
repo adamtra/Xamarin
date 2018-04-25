@@ -24,6 +24,7 @@
             <!--<Entry Text="{Binding Multiplier}" />-->
             <!--Try to set 1E-1-->
             <Entry Text="{Binding Multiplier, Mode=OneWayToSource}" />
+            <!--<Entry Text="{Binding Multiplier, Mode=TwoWay}" />-->
         </StackLayout>
 
         <StackLayout Orientation="Horizontal"
