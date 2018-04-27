@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.ItemDetailPage"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cofnij" Clicked="Back" />
+        <ToolbarItem Text=""/>
+        <ToolbarItem Text=""/>
+        <ToolbarItem Text="    Udostępnij" Clicked="CopyToClipboard" />
+        <ToolbarItem Text="Otwórz" Clicked="OpenInBrowser" />
+        <ToolbarItem Text="{Binding FavText}" Clicked="FavOffer"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Spacing="20" Padding="15">
+             <Image Source="{Binding Item.Images[0]}" Aspect="AspectFill"/>
+            <Label Text="{Binding Item.Title}" FontSize="Large"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="{Binding Item.City}" FontSize="Medium" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="{Binding Item.District}" Grid.Row="0" Grid.Column="1" FontSize="Medium"/>
+                    <Label Text="{Binding Item.Price, StringFormat='{0} zł'}" FontSize="Medium" Grid.Row="1" Grid.Column="0"/>
+                    <Label Text="{Binding Item.Rooms, StringFormat='Pokoje: {0}'}" FontSize="Medium" Grid.Row="1" Grid.Column="1"/>
+                </Grid>
+                <Label Text="Opis:" FontSize="Medium" />
+            <Label Text="{Binding Item.Description}" FontSize="Small"/>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
