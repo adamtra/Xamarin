@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Books.Views.NewBookPage"
+             xmlns:behaviors="using:Books.Behaviors"
+		     Title="Dodawanie książek">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Dodaj" Command="{Binding SaveBook}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Book Name" FontSize="Medium" />
+            <Entry x:Name="NameEntry" Text="{Binding Book.BookName}" FontSize="Small">
+                <Entry.Behaviors>
+                    <behaviors:BookNameValidationBehavior></behaviors:BookNameValidationBehavior>
+                </Entry.Behaviors>
+            </Entry>           
+            <Label Text="Author" FontSize="Medium" />
+            <Entry Text="{Binding Book.Author}" FontSize="Small">
+                <Entry.Behaviors>
+                    <behaviors:BookNameValidationBehavior></behaviors:BookNameValidationBehavior>
+                </Entry.Behaviors>
+            </Entry>
+            <Label Text="Description book" FontSize="Medium" />
+            <Entry Text="{Binding Book.Description}" FontSize="Small" Margin="0" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
