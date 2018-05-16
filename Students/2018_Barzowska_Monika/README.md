@@ -1,0 +1,3 @@
+# FoodParty
+
+![Widok](LAYOUT.png)
