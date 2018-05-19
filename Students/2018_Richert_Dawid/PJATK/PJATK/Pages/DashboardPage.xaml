@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PJATK.Pages.DashboardPage">
+    <ContentPage Title="Strona główna">
+        <StackLayout>
+            <Label Text="{Binding UserName, StringFormat='Witaj {0}!'}"></Label>
+            <Button Text="Płatności" Command="{Binding PaymentsCommand}"/>
+            <Button Text="Oceny" Command="{Binding GradesCommand}"/>
+            <Button Text="Wyloguj się" Margin="0,40,0,0" Command="{Binding LogoutCommand}"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Szybkie linki">
+        <StackLayout>
+            <Button Text="PJATK Warszawa" Command="{Binding QuickLinkCommand}" CommandParameter="http://www.pja.edu.pl"/>
+            <Button Text="PJATK Gdańsk" Command="{Binding QuickLinkCommand}" CommandParameter="https://gdansk.pjwstk.edu.pl"/>
+            <Button Text="PJATK Bytom" Command="{Binding QuickLinkCommand}" CommandParameter="http://www.bytom.pjwstk.edu.pl"/>
+            <Button Text="Software PJATK" Command="{Binding QuickLinkCommand}" CommandParameter="https://software.pjwstk.edu.pl"/>
+            <Button Text="E-dziekanat" Command="{Binding QuickLinkCommand}" CommandParameter="https://dziekanat.pjwstk.edu.pl"/>
+            <Button Text="E-podania" Command="{Binding QuickLinkCommand}" CommandParameter="http://www.podania.pjwstk.edu.pl"/>
+            <Button Text="Plan zajęć" Command="{Binding QuickLinkCommand}" CommandParameter="https://planzajec.pjwstk.edu.pl/Logowanie.aspx"/>
+            <Button Text="Poczta" Command="{Binding QuickLinkCommand}" CommandParameter="http://www.poczta.pjwstk.edu.pl"/>
+            <Button Text="Edux" Command="{Binding QuickLinkCommand}" CommandParameter="https://edux.pjwstk.edu.pl"/>
+        </StackLayout>
+     </ContentPage>
+</TabbedPage>
