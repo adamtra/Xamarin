@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PJATK.Pages.LoginPage" BackgroundColor="{StaticResource BrushBackground}">
+    <ContentPage.Content>
+        <Grid Margin="50,50,50,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout>
+                <Label Text="zaloguj się" FontSize="42.667" TextColor="{StaticResource BrushTheme1}"/>
+                <Label Text="nazwa użytkownika" Margin="0,50,0,0" FontSize="16" TextColor="{StaticResource BrushTheme1}"/>
+                <Entry Text="{Binding Login}"/>
+                <Label Text="hasło" Margin="0,15,0,0" FontSize="16" TextColor="{StaticResource BrushTheme1}"/>
+                <Entry Text="{Binding Password}" IsPassword="True"/>
+                <Button Margin="0,25,0,0" Text="zaloguj się" Command="{Binding LoginCommand}"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

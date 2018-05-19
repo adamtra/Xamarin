@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PJATK.Pages.PaymentsPage">
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="StyleLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+            <Style x:Key="StyleValue" TargetType="Label">
+                <Setter Property="FontSize" Value="21"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+    <ContentPage Title="Podsumowanie">
+        <StackLayout >
+            <Label TextColor="{StaticResource BrushTitle}" Text="Numer indywidualnego konta" Style="{StaticResource StyleLabel}"/>
+            <Label Text="{Binding PaymentsDataModel.Konto_wplat}" Style="{StaticResource StyleValue}" TextColor="{StaticResource BrushTitle}"/>
+            <Label TextColor="{StaticResource BrushTitle}" Text="Suma należności" Margin="0,20,0,0" Style="{StaticResource StyleLabel}"/>
+            <Label Text="{Binding PaymentsDataModel.Kwota_naleznosci, StringFormat='{0} zł'}" Style="{StaticResource StyleValue}" TextColor="{StaticResource BrushTitle}"/>
+            <Label TextColor="{StaticResource BrushTitle}" Text="Suma wpłat" Margin="0,20,0,0" Style="{StaticResource StyleLabel}"/>
+            <Label Text="{Binding PaymentsDataModel.Kwota_wplat, StringFormat='{0} zł'}" Style="{StaticResource StyleValue}" TextColor="{StaticResource BrushTitle}"/>
+            <Label TextColor="{StaticResource BrushTitle}" Text="Suma wypłat" Margin="0,20,0,0" Style="{StaticResource StyleLabel}"/>
+            <Label Text="{Binding PaymentsDataModel.Kwota_wyplat, StringFormat='{0} zł'}" Style="{StaticResource StyleValue}" TextColor="{StaticResource BrushTitle}"/>
+            <Label TextColor="{StaticResource BrushTitle}" Text="Saldo" Margin="0,20,0,0" Style="{StaticResource StyleLabel}"/>
+            <Label Text="{Binding PaymentsDataModel.Saldo, StringFormat='{0} zł'}" Style="{StaticResource StyleValue}" TextColor="{StaticResource BrushTitle}"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Należności">
+        <ListView ItemsSource="{Binding PaymentsDataModel.Oplaty}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Label Text="{Binding Nazwa}" FontSize="20" TextColor="{StaticResource BrushTitle}" Margin="0,-3,5,0" Grid.Column="1"/>
+                            <StackLayout Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="0,5,0,0" Orientation="Horizontal">
+                                <Label Text="Rata" TextColor="{StaticResource BrushTitle}" Margin="0,0,5,0" FontSize="16"/>
+                                <Label Text="{Binding NrRaty}" TextColor="{StaticResource BrushTitle}" FontSize="16"/>
+                                <Label Text="z" Margin="5,0" TextColor="{StaticResource BrushTitle}" FontSize="16"/>
+                                <Label Text="{Binding LiczbaRat}" TextColor="{StaticResource BrushTitle}" FontSize="16"/>
+                                <Label Text="{Binding TerminPlatnosci, StringFormat='płatna do {0:dd.MM.yyyy}'}" TextColor="{StaticResource BrushTitle}" FontSize="16" Margin="5,0,0,0"/>
+                            </StackLayout>
+                            <Label Text="{Binding Kwota, StringFormat='{0} zł'}" TextColor="{StaticResource BrushTitle}" Grid.Column="2" Grid.RowSpan="2" FontSize="24"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage>
+    <ContentPage Title="Wpłaty">
+        <ListView ItemsSource="{Binding PaymentsDataModel.Platnosci}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Label Text="{Binding DataWplaty, StringFormat='{0:dd.MM.yyyy}'}" FontSize="20" TextColor="{StaticResource BrushTitle}" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,-3,0,0"/>
+                            <Label Text="{Binding TytulWplaty}" TextColor="{StaticResource BrushTitle}" FontSize="10" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1" Margin="0,5,0,0"/>
+                            <Label Text="{Binding Kwota, StringFormat='{0} zł'}" TextColor="{StaticResource BrushTitle}" Grid.Column="2" FontSize="20"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage>
+</TabbedPage>
