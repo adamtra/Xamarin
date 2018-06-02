@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F2B43334-5C4A-4BC3-836B-4F95E3FBEA10}</ProjectGuid>
+    <ProjectGuid>{47E44B36-7745-4786-950E-9A66767E2B64}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>_40AlertAwait.Droid</RootNamespace>
-    <AssemblyName>_40AlertAwait.Android</AssemblyName>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <RootNamespace>_37PowersOfThree.Droid</RootNamespace>
+    <AssemblyName>_37PowersOfThree.Android</AssemblyName>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -80,9 +80,9 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\_40AlertAwait\_40AlertAwait.csproj">
-      <Project>{2541F424-BA59-486D-B2D7-DCB31818E0DA}</Project>
-      <Name>_40AlertAwait</Name>
+    <ProjectReference Include="..\_37PowersOfThree\_37PowersOfThree.csproj">
+      <Project>{4AFF6BCF-232B-4D24-BC02-1B27E642B236}</Project>
+      <Name>_37PowersOfThree</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

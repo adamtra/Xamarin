@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F2B43334-5C4A-4BC3-836B-4F95E3FBEA10}</ProjectGuid>
+    <ProjectGuid>{7A9C8CF9-C449-49AC-8426-DC58927ABC0E}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>_40AlertAwait.Droid</RootNamespace>
-    <AssemblyName>_40AlertAwait.Android</AssemblyName>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <RootNamespace>_43TextFileAsync.Droid</RootNamespace>
+    <AssemblyName>_43TextFileAsync.Android</AssemblyName>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -45,6 +45,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.FormsBook.Platform.Android">
+      <HintPath>..\..\..\Xamarin.FormsBook.Platform\Xamarin.FormsBook.Platform.Android\bin\Debug\Xamarin.FormsBook.Platform.Android.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
@@ -80,9 +83,9 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\_40AlertAwait\_40AlertAwait.csproj">
-      <Project>{2541F424-BA59-486D-B2D7-DCB31818E0DA}</Project>
-      <Name>_40AlertAwait</Name>
+    <ProjectReference Include="..\_43TextFileAsync\_43TextFileAsync.csproj">
+      <Project>{A48AAFED-4D82-414E-8AF9-0D1CC0C774C9}</Project>
+      <Name>_43TextFileAsync</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
