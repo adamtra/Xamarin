@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Repertoires"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Epertoire2.ViewModels"
+             xmlns:views="clr-namespace:Epertoire2.Views"
+             x:Class="Epertoire2.Pages.RepertoiresPage">
+    <ContentPage.BindingContext>
+        <vm:RepertoireViewModel x:Name="context"/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                     Style="{StaticResource ContentStackLayoutStyle}">
+            <ListView GroupDisplayBinding="{Binding DisplayName}"
+                      GroupShortNameBinding="{Binding ShortName}"
+                      HasUnevenRows="True"
+                      IsGroupingEnabled="True"
+                      ItemsSource="{Binding Repertoires}"
+                      ItemTapped="OnListViewItemTapped"
+                      WidthRequest="800.0">
+                <ListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding DisplayName}"
+                                  TextColor="{Binding TextColor}"/>
+                    </DataTemplate>
+                </ListView.GroupHeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <views:ShowCell Genres="{Binding Genres}"
+                                        Rating="{Binding Rating}"
+                                        Shows="{Binding Shows}"
+                                        Title="{Binding Title}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnToolbarItemFilterClicked"
+                     Icon="Filter.png"
+                     Order="Primary"
+                     Text="Filter"/>
+        <ToolbarItem Clicked="OnToolbarItemSettingsClicked"
+                     Order="Secondary"
+                     Text="Settings"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>
