@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Filter"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Epertoire2.ViewModels"
+             xmlns:views="clr-namespace:Epertoire2.Views"
+             x:Class="Epertoire2.Pages.FilterPage">
+    <ContentPage.BindingContext>
+        <vm:FilterViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Style="{StaticResource ContentStackLayoutStyle}">
+                <Label Style="{StaticResource ViewStyle}"
+                       Text="Enter a title of the movie you are looking for, or pick the start and end time to limit the number of shows displayed. Leave blank fields to not use these settings."/>
+                <Entry Placeholder="Title"
+                       Style="{StaticResource SettingStyle}"
+                       Text="{Binding Title}"/>
+                <Label Text="Pick the start time"/>
+                <TimePicker Style="{StaticResource TimePickerStyle}"
+                            Time="{Binding StartTime}"/>
+                <Label Text="Pick the end time"/>
+                <TimePicker Style="{StaticResource TimePickerStyle}"
+                            Time="{Binding EndTime}"/>
+                <BoxView Style="{StaticResource SeparatorStyle}"/>
+                <Label Style="{StaticResource SettingTitleStyle}"
+                       Text="Select genres"/>
+                <Grid Style="{StaticResource ViewStyle}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <views:SwitchControl Grid.Column="0" Grid.Row="0" IsToggled="{Binding IsActionToggled}" Text="Action"/>
+                    <views:SwitchControl Grid.Column="1" Grid.Row="0" IsToggled="{Binding IsAdventureToggled}" Text="Adventure"/>
+                    <views:SwitchControl Grid.Column="0" Grid.Row="1" IsToggled="{Binding IsAnimationToggled}" Text="Animation"/>
+                    <views:SwitchControl Grid.Column="1" Grid.Row="1" IsToggled="{Binding IsBiographicalToggled}" Text="Biographical"/>
+                    <views:SwitchControl Grid.Column="0" Grid.Row="2" IsToggled="{Binding IsComedyToggled}" Text="Comedy"/>
+                    <views:SwitchControl Grid.Column="1" Grid.Row="2" IsToggled="{Binding IsDramaToggled}" Text="Drama"/>
+                    <views:SwitchControl Grid.Column="0" Grid.Row="3" IsToggled="{Binding IsFamilyToggled}" Text="Family"/>
+                    <views:SwitchControl Grid.Column="1" Grid.Row="3" IsToggled="{Binding IsFantasyToggled}" Text="Fantasy"/>
+                    <views:SwitchControl Grid.Column="0" Grid.Row="4" IsToggled="{Binding IsHorrorToggled}" Text="Horror"/>
+                    <views:SwitchControl Grid.Column="1" Grid.Row="4" IsToggled="{Binding IsMusicalToggled}" Text="Musical"/>
+                    <views:SwitchControl Grid.Column="0" Grid.Row="5" IsToggled="{Binding IsRomanceToggled}" Text="Romance"/>
+                    <views:SwitchControl Grid.Column="1" Grid.Row="5" IsToggled="{Binding IsSciFiToggled}" Text="Sci-Fi"/>
+                    <views:SwitchControl Grid.Column="0" Grid.Row="6" IsToggled="{Binding IsThrillerToggled}" Text="Thriller"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnToolbarItemCancelClicked"
+                     Icon="Cancel.png"
+                     Order="Primary"
+                     Text="Cancel"/>
+        <ToolbarItem Command="{Binding ClearFilterCommand}"
+                     Icon="ClearFilter.png"
+                     Order="Primary"
+                     Text="Clear"/>
+        <ToolbarItem Clicked="OnToolbarItemApplyClicked"
+                     Command="{Binding ApplyFilterCommand}"
+                     Icon="Apply.png"
+                     Order="Primary"
+                     Text="Apply"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

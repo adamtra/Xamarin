@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Epertoire2.Pages.CinemaPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Start"
+                     Style="{StaticResource ContentStackLayoutStyle}"
+                     VerticalOptions="Start"
+                     x:Name="contentStackLayout">
+            <maps:Map MapType="Street"
+                      x:Name="map"/>
+            <StackLayout>
+                <Label Style="{StaticResource SubtitleStyle}"
+                       Text="{Binding Name}"/>
+                <Label FontAttributes="Bold"
+                       Text="Email:"/>
+                <Label Text="{Binding Email}"/>
+                <Label FontAttributes="Bold"
+                       Text="Phone:"/>
+                <Label Text="{Binding Phone}"/>
+                <Label FontAttributes="Bold"
+                       Text="Adress:"/>
+                <Label Text="{Binding Street}"/>
+                <Label Text="{Binding Post}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

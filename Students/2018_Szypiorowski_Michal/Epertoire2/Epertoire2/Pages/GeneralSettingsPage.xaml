@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Epertoire2.ViewModels"
+             x:Class="Epertoire2.Pages.GeneralSettingsPage">
+    <ContentPage.BindingContext>
+        <vm:GeneralSettingsViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource ContentStackLayoutStyle}">
+            <Label Style="{StaticResource SettingTitleStyle}" 
+                   Text="Options"/>
+            <Picker ItemsSource="{Binding Locations}"
+                    Margin="0"
+                    SelectedIndex="{Binding SelectedLocationIndex}"
+                    Style="{StaticResource SettingStyle}"
+                    Title="Pick location"/>
+            <Label Text="To indicate the area in which you are looking for cinemas, pick your location above."/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

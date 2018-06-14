@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Epertoire2.Views"
+             x:Class="Epertoire2.App">
+	<Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#FF6000"/>
+            </Style>
+            <Style TargetType="StackLayout" x:Key="ContentStackLayoutStyle">
+                <Setter Property="Padding" Value="24"/>
+            </Style>
+            <Style TargetType="View" x:Key="ViewStyle">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="WidthRequest" Value="800.0"/>
+            </Style>
+            <Style BasedOn="{StaticResource ViewStyle}" TargetType="View" x:Key="BodyStyle">
+                <Setter Property="Margin" Value="0, 0, 0, 18"/>
+            </Style>
+            <Style BasedOn="{StaticResource BodyStyle}" TargetType="BoxView" x:Key="SeparatorStyle">
+                <Setter Property="BackgroundColor" Value="Black"/>
+                <Setter Property="HeightRequest" Value="1"/>
+            </Style>
+            <Style BasedOn="{StaticResource BodyStyle}" TargetType="View" x:Key="SettingStyle">
+                <Setter Property="WidthRequest" Value="450.0"/>
+            </Style>
+            <Style TargetType="Image" x:Key="TileStyle">
+                <Setter Property="HeightRequest" Value="150.0"/>
+                <Setter Property="WidthRequest" Value="150.0"/>
+            </Style>
+            <Style TargetType="TimePicker" x:Key="TimePickerStyle">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="Margin" Value="0, 0, 0, 18"/>
+            </Style>
+            <Style TargetType="views:RatingControl" x:Key="ReadOnlyRatingControlStyle">
+                <Setter Property="CellSize" Value="16"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <Style BasedOn="{StaticResource SettingStyle}" TargetType="Label" x:Key="SettingTitleStyle">
+                <Setter Property="FontSize" Value="24"/>
+            </Style>
+            <Style TargetType="Label" x:Key="SubtitleStyle">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="24"/>
+            </Style>
+            <Style TargetType="Label" x:Key="TitleStyle">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="30"/>
+            </Style>
+        </ResourceDictionary>
+	</Application.Resources>
+</Application>

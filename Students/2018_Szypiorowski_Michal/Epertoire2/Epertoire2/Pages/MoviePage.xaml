@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Epertoire2.ViewModels"
+             xmlns:views="clr-namespace:Epertoire2.Views"
+             x:Class="Epertoire2.Pages.MoviePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout BackgroundColor="#1C808080"
+                             Orientation="Horizontal"
+                             Style="{StaticResource ContentStackLayoutStyle}">
+                    <StackLayout VerticalOptions="End"
+                                 x:Name="DetailsStackLayout">
+                        <Label Style="{StaticResource TitleStyle}"
+                               Text="{Binding Title}"/>
+                        <StackLayout Orientation="Horizontal">
+                            <views:RatingControl IsReadOnly="true"
+                                                 Style="{StaticResource ReadOnlyRatingControlStyle}"
+                                                 Value="{Binding AverageRating}"/>
+                            <Label Text="•"/>
+                            <Label Text="{Binding Genres}"/>
+                        </StackLayout>
+                        <Label Text="{Binding Shows}"/>
+                        <StackLayout Orientation="Horizontal"
+                                     x:Name="ButtonStackLayout">
+                            <Button Command="{Binding OpenWebsite}"
+                                    Text="Cinema website"/>
+                            <Button Command="{Binding OpenYoutube}"
+                                    Text="See trailer on YouTube"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Style="{StaticResource ContentStackLayoutStyle}">
+                    <Label Style="{StaticResource SubtitleStyle}"
+                           Text="Description"/>
+                    <Label Style="{StaticResource BodyStyle}"
+                           Text="{Binding Description}"/>
+                    <Label Style="{StaticResource SubtitleStyle}"
+                           Text="Additional information"/>
+                    <Label FontAttributes="Bold"
+                           Text="Director:"/>
+                    <Label Style="{StaticResource BodyStyle}"
+                           Text="{Binding Director}"/>
+                    <Label FontAttributes="Bold"
+                           Text="Cast:"/>
+                    <Label Style="{StaticResource BodyStyle}"
+                           Text="{Binding Cast}"/>
+                    <Label Style="{StaticResource SubtitleStyle}"
+                           Text="Ratings"/>
+                    <Grid Style="{StaticResource ViewStyle}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0"
+                               Grid.Row="0"
+                               Text="Cleanliness"/>
+                        <views:RatingControl Grid.Column="1"
+                                             Grid.Row="0"
+                                             IsReadOnly="True"
+                                             Style="{StaticResource ReadOnlyRatingControlStyle}"
+                                             Value="{Binding CleanlinessRating}"/>
+                        <Label Grid.Column="0"
+                               Grid.Row="1"
+                               Text="Screen"/>
+                        <views:RatingControl Grid.Column="1"
+                                             Grid.Row="1"
+                                             IsReadOnly="True"
+                                             Style="{StaticResource ReadOnlyRatingControlStyle}"
+                                             Value="{Binding ScreenRating}"/>
+                        <Label Grid.Column="0"
+                               Grid.Row="2"
+                               Text="Seats"/>
+                        <views:RatingControl Grid.Column="1"
+                                             Grid.Row="2"
+                                             IsReadOnly="True"
+                                             Style="{StaticResource ReadOnlyRatingControlStyle}"
+                                             Value="{Binding SeatsRating}"/>
+                        <Label Grid.Column="0"
+                               Grid.Row="3"
+                               Text="Sound"/>
+                        <views:RatingControl Grid.Column="1"
+                                             Grid.Row="3"
+                                             IsReadOnly="True"
+                                             Style="{StaticResource ReadOnlyRatingControlStyle}"
+                                             Value="{Binding SoundRating}"/>
+                        <Label Grid.Column="0"
+                               Grid.Row="4"
+                               Text="Snacks"/>
+                        <views:RatingControl Grid.Column="1"
+                                             Grid.Row="4"
+                                             IsReadOnly="True"
+                                             Style="{StaticResource ReadOnlyRatingControlStyle}"
+                                             Value="{Binding SnacksRating}"/>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
