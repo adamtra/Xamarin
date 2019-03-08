@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wizytówki.Views.AddPerson"
+             Title="Dodaj wizytówkę">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical">
+                <Label FontSize="22">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Podgląd wizytówki" FontSize="Small" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Imię: " FontAttributes="Bold"/>
+                                <Span BindingContext="{x:Reference Name=FirstName}" Text="{Binding Path=Text, Mode=OneWay}"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Nazwisko: " FontAttributes="Bold"/>
+                                <Span BindingContext="{x:Reference Name=LastName}" Text="{Binding Path=Text, Mode=OneWay}" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Numer telefonu: " FontAttributes="Bold"/>
+                                <Span BindingContext="{x:Reference Name=PhoneNumber}" Text="{Binding Path=Text, Mode=OneWay}" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Adres email: " FontAttributes="Bold"/>
+                                <Span BindingContext="{x:Reference Name=EmailAddress}" Text="{Binding Path=Text, Mode=OneWay}" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <StackLayout Spacing="20" Padding="15">
+                    
+                    <Label Text="Imię" FontSize="Medium" />
+                    <Entry x:Name="FirstName" Text="{Binding FirstName, Mode=TwoWay}" FontSize="Small"/>
+                    <Label TextColor="Red" Text="{Binding FirstNameError}"/>
+                    
+                    <Label Text="Nazwisko" FontSize="Medium" />
+                    <Entry x:Name="LastName" Text="{Binding LastName, Mode=TwoWay}" FontSize="Small"/>
+                    <Label TextColor="Red" Text="{Binding LastNameError}"/>
+
+                    <Label Text="Numer telefonu" FontSize="Medium" />
+                    <Entry x:Name="PhoneNumber" Text="{Binding PhoneNumber, Mode=TwoWay}" FontSize="Small"/>
+                    <Label TextColor="Red" Text="{Binding PhoneNumberError}"/>
+
+                    <Label Text="Adres email" FontSize="Medium" />
+                    <Entry x:Name="EmailAddress" Text="{Binding EmailAddress, Mode=TwoWay}" FontSize="Small"/>
+                    <Label TextColor="Red" Text="{Binding EmailAddressError}"/>
+
+                </StackLayout>
+                <Button Text="Dodaj" Command="{Binding AddPersonCommand}"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
